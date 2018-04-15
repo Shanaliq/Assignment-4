@@ -58,6 +58,7 @@ int main(int argc, const char * argv[]) {
                 std::cout<<"Insertion sort: ";
                 printArray(pikachu);
                 std::cout << "\n    Total # comparisons: "<< sortthis.GetInsertionSortCounter()<<"\n";
+                return 0;
                 break;
             }
             case 'm': {
@@ -65,6 +66,7 @@ int main(int argc, const char * argv[]) {
                 std::cout<<"Merge sort: ";
                 printArray(pikachu);
                 std::cout << "\n    Total # comparisons: "<< sortthis.GetMergeSortCounter()<<"\n";
+                return 0;
                 break;
             }
             case 'q': {
@@ -72,7 +74,11 @@ int main(int argc, const char * argv[]) {
                 std::cout<<"Quick sort: ";
                 printArray(pikachu);
                 std::cout << "\n    Total # comparisons: "<< sortthis.GetQuickSortCounter()<<"\n";
+                return 0;
                 break;
+            }
+            default:{
+                std::cout<<"Invalid Input\ninsertion-sort (i) merge-sort (m) quick-sort (q)\n";
             }
         }
     } 
