@@ -16,7 +16,7 @@
 class Sorting { //Sort Method
 private:
     int InsertionSortCounter;
-
+    int MergeSortCounter;
 public:
     Sorting();
     ~Sorting();
@@ -25,4 +25,8 @@ public:
     void InsertionSort(int values[], int numValues);
     void InsertItem(int values [], int start, int end);
     int GetInsertionSortCounter();
+    
+    void MergeSort(int values[], int first, int last);
+    void Merge(int values[], int leftFirst, int leftLast, int rightFirst, int rightLast);
+    int GetMergeSortCounter();
 };

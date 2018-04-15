@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80B61E662083B49000D0F416 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 80B61E652083B49000D0F416 /* makefile */; };
 		80DD7609207FB36400976EAC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80DD7608207FB36400976EAC /* main.cpp */; };
 		80DD7611207FB42E00976EAC /* Sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80DD760F207FB42E00976EAC /* Sorting.cpp */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		80745DBA208153AF00F814F8 /* ordered.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ordered.txt; sourceTree = "<group>"; };
 		80745DBB20815E6800F814F8 /* random.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = random.txt; sourceTree = "<group>"; };
+		80B61E642083B47A00D0F416 /* reversed.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = reversed.txt; sourceTree = "<group>"; };
+		80B61E652083B49000D0F416 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		80DD7605207FB36400976EAC /* Assignment 4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Assignment 4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DD7608207FB36400976EAC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		80DD760F207FB42E00976EAC /* Sorting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sorting.cpp; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				80DD7610207FB42E00976EAC /* Sorting.h */,
 				80745DBA208153AF00F814F8 /* ordered.txt */,
 				80745DBB20815E6800F814F8 /* random.txt */,
+				80B61E642083B47A00D0F416 /* reversed.txt */,
+				80B61E652083B49000D0F416 /* makefile */,
 			);
 			path = "Assignment 4";
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			files = (
 				80DD7609207FB36400976EAC /* main.cpp in Sources */,
 				80DD7611207FB42E00976EAC /* Sorting.cpp in Sources */,
+				80B61E662083B49000D0F416 /* makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

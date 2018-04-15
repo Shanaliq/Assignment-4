@@ -39,15 +39,41 @@ void fileHandler(string file){ // handles the file input.
 
 void printArray(int values[]){
     for(int i = 0; i<10000; i++){
-        std::cout<<values[i]<<"\n";
+        std::cout<<values[i]<<" ";
     }
 }
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    int continueLoop = 1;
+    char userInputChar;
+    int userInputNum;
     fileHandler("/Users/nekosama/Desktop/Assignment 4/Assignment 4/random.txt");
-    sortthis.InsertionSort(pikachu, 10000);
-    printArray(pikachu);
-    std::cout<<sortthis.GetInsertionSortCounter()<<"\n";
-    return 0;
+    std::cout << "insertion-sort (i) merge-sort (m) quick-sort (q)\n";
+    while (continueLoop == 1) {
+        std::cout << "Enter the algorithm: ";
+        cin >> userInputChar;
+        switch (userInputChar) {
+            case 'i': {
+                sortthis.InsertionSort(pikachu, 10000);
+                std::cout<<"Insertion sort: ";
+                printArray(pikachu);
+                std::cout << "\n    Total # comparisons: "<< sortthis.GetInsertionSortCounter()<<"\n";
+                break;
+            }
+            case 'm': {
+                sortthis.MergeSort(pikachu, 0, 9999);
+                std::cout<<"Merge sort: ";
+                printArray(pikachu);
+                std::cout << "\n    Total # comparisons: "<< sortthis.GetInsertionSortCounter()<<"\n";
+                break;
+            }
+            case 'q': {
+                break;
+            }
+        }
+    }
+    
+    
+    
+    
 }

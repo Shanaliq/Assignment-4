@@ -10,6 +10,7 @@
 
 Sorting::Sorting(){
     InsertionSortCounter = 0;
+    MergeSortCounter = 0;
 }
 
 Sorting::~Sorting(){
@@ -42,6 +43,7 @@ void Sorting::InsertItem(int value [], int start, int end){
 }
 
 void Sorting::InsertionSort(int values[], int numValues){
+    InsertionSortCounter = 0;
     for(int count = 0; count< numValues; count++){
         InsertItem(values,0,count);
     }
@@ -50,4 +52,58 @@ void Sorting::InsertionSort(int values[], int numValues){
 int Sorting::GetInsertionSortCounter(){
     return InsertionSortCounter;
 }
+
+int Sorting::GetMergeSortCounter(){
+    return MergeSortCounter;
+}
+
+
+void Sorting::MergeSort(int values[], int first, int last){
+    if (first < last){
+        int middle = (first + last)/2;
+        MergeSort(values, first, middle);
+        MergeSort(values, middle+1, last);
+        Merge(values, first, middle, middle+1, last);
+    }
+}
+
+void Sorting::Merge(int values[], int leftFirst, int leftLast, int rightFirst, int rightLast){
+    int tempArray[10000];
+    int index = leftFirst;
+    int saveFirst = leftFirst;
+    
+    while ((leftFirst <= leftLast) && (rightFirst <= rightLast))
+    {
+        if(values[leftFirst] < values[rightFirst])
+        {
+            tempArray[index]= values[leftFirst];
+            leftFirst++;
+        }
+        else
+        {
+            tempArray[index] = values[rightFirst];
+            rightFirst++;
+        }
+        index++;
+    }
+    
+    while(leftFirst <= leftLast)
+    {
+        tempArray[index]=values[leftFirst];
+        leftFirst++;
+        index++;
+    }
+    while(rightFirst<= rightLast){
+        tempArray[index] = values[rightFirst];
+        rightFirst++;
+        index++;
+    }
+    for(index = saveFirst; index <= rightLast; index++){
+        values[index]= tempArray[index];
+    }
+}
+
+
+
+
 
