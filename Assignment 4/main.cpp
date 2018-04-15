@@ -46,8 +46,8 @@ void printArray(int values[]){
 int main(int argc, const char * argv[]) {
     int continueLoop = 1;
     char userInputChar;
-    int userInputNum;
-    fileHandler("/Users/nekosama/Desktop/Assignment 4/Assignment 4/random.txt");
+    string file = argv[1];
+    fileHandler(file);
     std::cout << "insertion-sort (i) merge-sort (m) quick-sort (q)\n";
     while (continueLoop == 1) {
         std::cout << "Enter the algorithm: ";
@@ -75,9 +75,5 @@ int main(int argc, const char * argv[]) {
                 break;
             }
         }
-    }
-    
-    
-    
-    
+    } 
 }

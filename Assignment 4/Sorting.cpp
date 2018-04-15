@@ -77,11 +77,13 @@ void Sorting::Merge(int values[], int leftFirst, int leftLast, int rightFirst, i
     {
         if(values[leftFirst] < values[rightFirst])
         {
+            MergeSortCounter++;
             tempArray[index]= values[leftFirst];
             leftFirst++;
         }
         else
         {
+            MergeSortCounter++;
             tempArray[index] = values[rightFirst];
             rightFirst++;
         }
@@ -117,23 +119,28 @@ void Sorting::Split(int values[], int first, int last, int &splitpoint){
     int splitVal = values[first];
     int saveFirst = first;
     bool onCorrectSide;
-    
     first++;
     do
     {
         onCorrectSide = true;
         while(onCorrectSide)
-            if(values[first]>splitVal)
+            if(values[first]>splitVal){
+                QuickSortCounter++;
                 onCorrectSide = false;
+            }
             else{
+                QuickSortCounter++;
                 first++;
                 onCorrectSide = (first < last);
             }
-        onCorrectSide=(first<= last);
+        onCorrectSide=(first <= last);
         while(onCorrectSide)
-            if(values[last]<=splitVal)
+            if(values[last]<=splitVal){
+                QuickSortCounter++;
                 onCorrectSide= false;
+            }
             else{
+                QuickSortCounter++;
                 last--;
                 onCorrectSide = (first <= last);
             }
@@ -143,7 +150,6 @@ void Sorting::Split(int values[], int first, int last, int &splitpoint){
             last --;
         }
     }while(first <= last);
-    
     splitpoint = last;
     Swap(values, saveFirst, splitpoint);
 }
