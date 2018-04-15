@@ -11,6 +11,7 @@
 Sorting::Sorting(){
     InsertionSortCounter = 0;
     MergeSortCounter = 0;
+    QuickSortCounter = 0;
 }
 
 Sorting::~Sorting(){
@@ -103,6 +104,53 @@ void Sorting::Merge(int values[], int leftFirst, int leftLast, int rightFirst, i
     }
 }
 
+void Sorting::QuickSort(int values[], int first, int last){
+    int splitPoint;
+    if (first < last){
+        Split(values, first, last, splitPoint);
+        QuickSort(values, first, splitPoint-1);
+        QuickSort(values, splitPoint+1, last);
+    }
+}
+
+void Sorting::Split(int values[], int first, int last, int &splitpoint){
+    int splitVal = values[first];
+    int saveFirst = first;
+    bool onCorrectSide;
+    
+    first++;
+    do
+    {
+        onCorrectSide = true;
+        while(onCorrectSide)
+            if(values[first]>splitVal)
+                onCorrectSide = false;
+            else{
+                first++;
+                onCorrectSide = (first < last);
+            }
+        onCorrectSide=(first<= last);
+        while(onCorrectSide)
+            if(values[last]<=splitVal)
+                onCorrectSide= false;
+            else{
+                last--;
+                onCorrectSide = (first <= last);
+            }
+        if(first < last){
+            Swap(values, first, last);
+            first ++;
+            last --;
+        }
+    }while(first <= last);
+    
+    splitpoint = last;
+    Swap(values, saveFirst, splitpoint);
+}
+
+int Sorting::GetQuickSortCounter(){
+    return QuickSortCounter;
+}
 
 
 

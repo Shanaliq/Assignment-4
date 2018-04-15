@@ -64,10 +64,14 @@ int main(int argc, const char * argv[]) {
                 sortthis.MergeSort(pikachu, 0, 9999);
                 std::cout<<"Merge sort: ";
                 printArray(pikachu);
-                std::cout << "\n    Total # comparisons: "<< sortthis.GetInsertionSortCounter()<<"\n";
+                std::cout << "\n    Total # comparisons: "<< sortthis.GetMergeSortCounter()<<"\n";
                 break;
             }
             case 'q': {
+                sortthis.QuickSort(pikachu, 0, 9999);
+                std::cout<<"Quick sort: ";
+                printArray(pikachu);
+                std::cout << "\n    Total # comparisons: "<< sortthis.GetQuickSortCounter()<<"\n";
                 break;
             }
         }
