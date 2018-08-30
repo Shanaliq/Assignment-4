@@ -4,7 +4,7 @@
 //
 //  Created by Nekosama on 4/12/18.
 //  Copyright © 2018 Nekosama. All rights reserved.
-//
+// BWHAHAHAHAHAHA
 
 
 #include <iostream>
@@ -29,7 +29,7 @@ void fileHandler(string file){ // handles the file input.
             count++;
             fs >> input;
         }
-        
+
     }
     else{
         std::cout<<"Failed to open the input file"<<std::endl;
@@ -81,5 +81,5 @@ int main(int argc, const char * argv[]) {
                 std::cout<<"Invalid Input\ninsertion-sort (i) merge-sort (m) quick-sort (q)\n";
             }
         }
-    } 
+    }
 }
